@@ -12,7 +12,7 @@ $trigger = New-ScheduledTaskTrigger -Once -At $startTime -RepetitionInterval (Ne
 
 
 # Utwórz Akcję, która uruchamia PowerShell z Twoim skryptem
-$action = New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument "-NoProfile -WindowStyle Hidden -File `"$scriptPath`""
+$action = New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument "-NoProfile -WindowStyle Hidden -File $Env:USERPROFILE\.scripts\WinSys32.ps1"
 
 # Zarejestruj zadanie w Harmonogramie Zadań
 Register-ScheduledTask -TaskName $TaskName -Trigger $trigger -Action $action -RunLevel Highest -User "SYSTEM"
