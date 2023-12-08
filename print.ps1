@@ -15,7 +15,7 @@ $graphics.CopyFromScreen($bounds.Location, [Drawing.Point]::Empty, $bounds.size)
 
 # $bmp.Save("$env:USERPROFILE\test.png")
 # add timestamp to filename
-$bmp.Save("$Env:USERPROFILE\.scripts\$Env:USERNAME-$(Get-Date -Format 'yyyyMMddHHmmss').png")
+$bmp.Save("C:\Users\banan\.scripts\$(Get-Date -Format 'yyyyMMddHHmmss').png")
 
 $graphics.Dispose()
 $bmp.Dispose()
